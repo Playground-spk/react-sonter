@@ -1,0 +1,14 @@
+.LinkTo {
+    font-size: 64px;
+    color: white;
+    font-weight: bold
+}
+
+.Button55555 {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    background-image: linear-gradient(to bottom right, #0B486B, #F56217);
+
+}
