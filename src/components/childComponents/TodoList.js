@@ -9,10 +9,11 @@ export default class TodoList extends Component {
           {this.props.TodoList.map((item, idx) => {
             return (
               <Item
-                key={item}
-                item={item}
+                id={item.id}
+                list={item.task}
                 idx={idx}
                 TodoList={this.props.TodoList}
+                deleteItem={this.props.deleteItem}
               />
             );
           })}

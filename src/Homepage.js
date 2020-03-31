@@ -36,6 +36,15 @@ export default class Homepage extends Component {
             </Button>
           </Col>
         </Row>
+        <Row style={{ height: "22rem" }} justify="center" align="middle">
+          <Col span={8}>
+            <Button type="primary" shape="round" className="Button55555">
+              <Link to={"/apptodo"} className="LinkTo">
+                Todo List
+              </Link>
+            </Button>
+          </Col>
+        </Row>
       </div>
     );
   }
