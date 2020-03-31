@@ -5,6 +5,10 @@ import "antd/dist/antd.css";
 import "./css/homepage.css";
 
 export default class Homepage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
     return (
       <div>
@@ -41,6 +45,14 @@ export default class Homepage extends Component {
             <Button type="primary" shape="round" className="Button55555">
               <Link to={"/apptodo"} className="LinkTo">
                 Todo List
+              </Link>
+            </Button>
+          </Col>
+          <Col span={8}>
+            <Button type="primary" shape="round" className="Button55555">
+              <Link to={"/apptodo2box"} className="LinkTo">
+                Todo List
+                <br /> 2Box
               </Link>
             </Button>
           </Col>
