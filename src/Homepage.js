@@ -56,6 +56,22 @@ export default class Homepage extends Component {
               </Link>
             </Button>
           </Col>
+          <Col span={8}>
+            <Button type="primary" shape="round" className="Button55555">
+              <Link to={"/appshopping"} className="LinkTo">
+                Shopping <br /> Web
+              </Link>
+            </Button>
+          </Col>
+        </Row>
+        <Row>
+          <Col span={8}>
+            <Button type="primary" shape="round" className="Button55555">
+              <Link to={"/apptabcomponents"} className="LinkTo">
+                Tab <br /> Component
+              </Link>
+            </Button>
+          </Col>
         </Row>
       </div>
     );
