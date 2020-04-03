@@ -7,6 +7,7 @@ import AppToDo from "./components/AppToDo";
 import AppTodo2Box from "./AppTodo2Box";
 import AppShopping from "./AppShopping";
 import AppTabComponents from "./AppTabComponents";
+import AppTodoListAndComplete from "./AppTodoListAndComplete";
 export default class MyWeb extends Component {
   render() {
     return (
@@ -19,6 +20,10 @@ export default class MyWeb extends Component {
           <Route path="/apptodo2box" component={AppTodo2Box} />
           <Route path="/appshopping" component={AppShopping} />
           <Route path="/apptabcomponents" component={AppTabComponents} />
+          <Route
+            path="/apptodoandcomplete"
+            component={AppTodoListAndComplete}
+          />
         </Switch>
       </div>
     );

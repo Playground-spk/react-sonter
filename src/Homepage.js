@@ -72,6 +72,13 @@ export default class Homepage extends Component {
               </Link>
             </Button>
           </Col>
+          <Col span={8}>
+            <Button type="primary" shape="round" className="Button55555">
+              <Link to={"/apptodoandcomplete"} className="LinkTo">
+                Tab <br /> Component
+              </Link>
+            </Button>
+          </Col>
         </Row>
       </div>
     );

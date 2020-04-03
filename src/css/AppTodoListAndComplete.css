@@ -1,0 +1,6 @@
+.theBox {
+    width: 100%;
+    min-height: 300px;
+
+    border: 2px solid gray
+}
