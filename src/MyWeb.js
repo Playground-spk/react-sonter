@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./Homepage";
 import TrafficLight from "./TrafficLight";
-import Carousel from "./Carousel";
+import Carousel from "./AppCarousel";
 import AppToDo from "./components/AppToDo";
 import AppTodo2Box from "./AppTodo2Box";
 import AppShopping from "./AppShopping";
