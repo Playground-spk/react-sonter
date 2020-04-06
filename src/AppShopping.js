@@ -16,13 +16,13 @@ export default class AppShopping extends Component {
     this.state = {
       productList: allProducts,
       indexClassify: 0,
-      selectProduct: []
+      selectProduct: [],
     };
   }
-  changeClassify = index => {
+  changeClassify = (index) => {
     this.setState({ indexClassify: index });
   };
-  chooseProduct = choose => {
+  chooseProduct = (choose) => {
     let newChoose = [...this.state.selectProduct];
     for (let key of newChoose) {
       if (key.name == choose.name) {
@@ -41,19 +41,19 @@ export default class AppShopping extends Component {
     //   selectProduct: [...this.state.selectProduct, choose.sendName]
     // });
   };
-  deleteProductInCart = idx => {
+  deleteProductInCart = (idx) => {
     let selectProduct = [...this.state.selectProduct];
     selectProduct.splice(idx, 1);
     this.setState({ selectProduct: selectProduct });
   };
 
-  plusAmount = index => {
+  plusAmount = (index) => {
     let selectProduct = [...this.state.selectProduct];
     selectProduct[index].amount += 1;
     this.setState({ selectProduct: selectProduct });
   };
 
-  minerAmount = index => {
+  minerAmount = (index) => {
     let selectProduct = [...this.state.selectProduct];
     selectProduct[index].amount -= 1;
     this.setState({ selectProduct: selectProduct });
@@ -72,12 +72,12 @@ export default class AppShopping extends Component {
       <Goods
         productList={this.state.productList}
         chooseProduct={this.chooseProduct}
-      />
+      />,
     ];
     return (
       <div>
         <Layout>
-          <Header>Header</Header>
+          <Header>Sod.. Sod.. Market</Header>
           <Layout>
             <Sider>
               <InSider
@@ -92,18 +92,47 @@ export default class AppShopping extends Component {
                 </Col>
 
                 <Col span={8}>
-                  <Cart
-                    selectProduct={this.state.selectProduct}
-                    productList={this.state.productList}
-                    deleteProductInCart={this.deleteProductInCart}
-                    plusAmount={this.plusAmount}
-                    minerAmount={this.minerAmount}
-                  />
+                  <Row style={{ width: "100%", height: "75px" }}>
+                    <Col span={8} className="App-6-cart-header ">
+                      <Row
+                        style={{ width: "100%", height: "100%" }}
+                        justify="center"
+                        align="middle"
+                      >
+                        <Col span={16}>รายการ</Col>
+                        <Col span={8} className="App-6-cart-head-border"></Col>
+                      </Row>
+                    </Col>
+                    <Col span={6} className="App-6-cart-header ">
+                      <Row
+                        style={{ width: "100%", height: "100%" }}
+                        justify="center"
+                        align="middle"
+                      >
+                        <Col span={16}>จำนวน</Col>
+                        <Col span={8} className="App-6-cart-head-border"></Col>
+                      </Row>
+                    </Col>
+                    <Col span={10} className="App-6-cart-header ">
+                      {" "}
+                      ราคา
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Cart
+                      style={{ width: "100%" }}
+                      selectProduct={this.state.selectProduct}
+                      productList={this.state.productList}
+                      deleteProductInCart={this.deleteProductInCart}
+                      plusAmount={this.plusAmount}
+                      minerAmount={this.minerAmount}
+                    />
+                  </Row>
                 </Col>
               </Row>
             </Content>
           </Layout>
-          <Footer>Footer</Footer>
+          <Footer>Welcome to my Shopping Cart base on react antd </Footer>
         </Layout>
       </div>
     );
